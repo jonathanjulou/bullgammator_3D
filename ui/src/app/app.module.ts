@@ -23,6 +23,7 @@ import { OctadsComponent } from './debug/octads/octads.component';
 import { SeriesComponent } from './debug/series/series.component';
 import { ExecComponent } from './debug/exec/exec.component';
 import { DrumComponent } from './drum/drum.component';
+import { PanelComponent } from './panel/panel.component';
 
 import { MemoriesService } from './debug/providers/memories.service';
 import { SeriesService } from './debug/providers/series.service';
@@ -31,6 +32,7 @@ import { BullgammatorService } from './providers/bullgammator.service';
 import { DrumService } from './drum/providers/drum.service';
 import { EditorService } from './editors/providers/editor.service';
 import { CodeLibService } from './code-lib/providers/code-lib.service';
+import { PanelService } from './panel/providers/panel.service';
 
 
 @NgModule({
@@ -38,7 +40,7 @@ import { CodeLibService } from './code-lib/providers/code-lib.service';
     AppComponent,
     HexEditorComponent, CodeLibComponent,
     DebugComponent, MbComponent, OctadsComponent, SeriesComponent, ExecComponent,
-		DrumComponent
+		DrumComponent, PanelComponent
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -47,7 +49,7 @@ import { CodeLibService } from './code-lib/providers/code-lib.service';
   ],
   providers: [
 		MemoriesService, SeriesService, ExecService,
-		BullgammatorService, DrumService, EditorService, CodeLibService
+		BullgammatorService, DrumService, EditorService, CodeLibService, PanelService
 	],
   bootstrap: [AppComponent]
 })
