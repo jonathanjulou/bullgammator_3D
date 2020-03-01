@@ -1,3 +1,5 @@
+# WIP: I have taken over the continuation of this project as my Histonum project, namely making an interactive 3D model of the Gamma 3 
+
 # BullGammator
 <img src="https://raw.githubusercontent.com/lutrampal/bullgammator/master/bullgammator.jpg" height="300" />
 
