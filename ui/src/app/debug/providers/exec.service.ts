@@ -19,7 +19,9 @@ export class ExecService {
 	}
 
 	executeUntil(line: number, seriesId: number) {
-		this.exec.executeUntil(line, seriesId);
+		for (i=0; i<64; i++){
+			this.exec.executeNextInstruction();
+		}
 	}
 
 	getLine() {
