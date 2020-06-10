@@ -1,5 +1,7 @@
 extends KinematicBody
 
+onready var panneau = get_node("../CanvasLayer2/panneau")
+
 var camera
 
 var SPEED = 0.3

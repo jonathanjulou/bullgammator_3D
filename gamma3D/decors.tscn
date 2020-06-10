@@ -1,37 +1,80 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=102 format=2]
 
-[ext_resource path="res://3D_models/bull.tscn" type="PackedScene" id=1]
-[ext_resource path="res://arbre.tscn" type="PackedScene" id=2]
+[ext_resource path="res://2D_textures/refonte_UI.png" type="Texture" id=1]
+[ext_resource path="res://3D_models/arbre.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://2D_textures/interface_prog.png" type="Texture" id=3]
 [ext_resource path="res://simulation.gd" type="Script" id=4]
 [ext_resource path="res://3D_models/Material_003.material" type="Material" id=5]
 [ext_resource path="res://HTTPRequest.gd" type="Script" id=6]
 [ext_resource path="res://2D_textures/dialogue_avec_grodoudou.png" type="Texture" id=7]
-[ext_resource path="res://2D_textures/arrow.png" type="Texture" id=8]
+[ext_resource path="res://2D_textures/button_pressed_2.png" type="Texture" id=8]
 [ext_resource path="res://decors.gd" type="Script" id=9]
 [ext_resource path="res://KinematicBody.gd" type="Script" id=10]
 [ext_resource path="res://CameraGimbal.gd" type="Script" id=11]
 [ext_resource path="res://2D_textures/ciel.png" type="Texture" id=12]
-[ext_resource path="res://2D_textures/dialogue.png" type="Texture" id=13]
+[ext_resource path="res://2D_textures/tuto_1.png" type="Texture" id=13]
 [ext_resource path="res://VCR_OSD_MONO_1.001.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://TUTORIAL.gd" type="Script" id=15]
 [ext_resource path="res://3D_models/panel.tscn" type="PackedScene" id=16]
 [ext_resource path="res://RayCast.gd" type="Script" id=17]
-[ext_resource path="res://2D_textures/arrow_pressed.png" type="Texture" id=18]
+[ext_resource path="res://2D_textures/button_pressed_3.png" type="Texture" id=18]
 [ext_resource path="res://arrow.gd" type="Script" id=19]
 [ext_resource path="res://arrow_collision.gd" type="Script" id=20]
-[ext_resource path="res://2D_textures/controles.png" type="Texture" id=21]
-[ext_resource path="res://2D_textures/titiller.png" type="Texture" id=22]
-[ext_resource path="res://2D_textures/titiller_pressé.png" type="Texture" id=23]
-[ext_resource path="res://2D_textures/continuer.png" type="Texture" id=24]
-[ext_resource path="res://2D_textures/continuer_pressé.png" type="Texture" id=25]
+[ext_resource path="res://2D_textures/aide.png" type="Texture" id=21]
+[ext_resource path="res://2D_textures/tuto_0.png" type="Texture" id=22]
+[ext_resource path="res://tuto.gd" type="Script" id=23]
+[ext_resource path="res://2D_textures/tuto_2.png" type="Texture" id=24]
+[ext_resource path="res://2D_textures/tuto_3.png" type="Texture" id=25]
+[ext_resource path="res://2D_textures/controles_plus_clair.png" type="Texture" id=26]
 [ext_resource path="res://2D_textures/interface_prog_2.png" type="Texture" id=27]
-[ext_resource path="res://2D_textures/reboot.png" type="Texture" id=28]
-[ext_resource path="res://2D_textures/reboot_pressé.png" type="Texture" id=29]
-[ext_resource path="res://2D_textures/charger.png" type="Texture" id=30]
-[ext_resource path="res://2D_textures/charger_pressé.png" type="Texture" id=31]
+[ext_resource path="res://2D_textures/tuto_4.png" type="Texture" id=28]
+[ext_resource path="res://2D_textures/reussite/reussite0010.png" type="Texture" id=29]
+[ext_resource path="res://2D_textures/reussite/reussite0008.png" type="Texture" id=30]
+[ext_resource path="res://2D_textures/reussite/reussite0009.png" type="Texture" id=31]
 [ext_resource path="res://2D_textures/fond.png" type="Texture" id=32]
 [ext_resource path="res://panneau.gd" type="Script" id=33]
+[ext_resource path="res://bull.tscn" type="PackedScene" id=34]
+[ext_resource path="res://panel_nopanel.dae" type="PackedScene" id=35]
+[ext_resource path="res://3D_models/panel.tres" type="Shader" id=36]
+[ext_resource path="res://open_racks.gd" type="Script" id=37]
+[ext_resource path="res://2D_textures/arrow_pressed_2.png" type="Texture" id=38]
+[ext_resource path="res://2D_textures/reussite/reussite0012.png" type="Texture" id=39]
+[ext_resource path="res://2D_textures/reussite/reussite0011.png" type="Texture" id=40]
+[ext_resource path="res://2D_textures/reussite/reussite0013.png" type="Texture" id=41]
+[ext_resource path="res://2D_textures/reussite/reussite0007.png" type="Texture" id=42]
+[ext_resource path="res://2D_textures/reussite/reussite0004.png" type="Texture" id=43]
+[ext_resource path="res://2D_textures/reussite/reussite0002.png" type="Texture" id=44]
+[ext_resource path="res://2D_textures/reussite/reussite0005.png" type="Texture" id=45]
+[ext_resource path="res://2D_textures/reussite/reussite0000.png" type="Texture" id=46]
+[ext_resource path="res://2D_textures/reussite/reussite0003.png" type="Texture" id=47]
+[ext_resource path="res://2D_textures/reussite/reussite0006.png" type="Texture" id=48]
+[ext_resource path="res://2D_textures/reussite/reussite0001.png" type="Texture" id=49]
+[ext_resource path="res://2D_textures/reussite/reussite0014.png" type="Texture" id=50]
+[ext_resource path="res://2D_textures/reussite/reussite0015.png" type="Texture" id=51]
+[ext_resource path="res://2D_textures/reussite/reussite0016.png" type="Texture" id=52]
+[ext_resource path="res://2D_textures/reussite/reussite0037.png" type="Texture" id=53]
+[ext_resource path="res://2D_textures/reussite/reussite0018.png" type="Texture" id=54]
+[ext_resource path="res://2D_textures/reussite/reussite0031.png" type="Texture" id=55]
+[ext_resource path="res://2D_textures/reussite/reussite0028.png" type="Texture" id=56]
+[ext_resource path="res://2D_textures/reussite/reussite0020.png" type="Texture" id=57]
+[ext_resource path="res://2D_textures/reussite/reussite0023.png" type="Texture" id=58]
+[ext_resource path="res://2D_textures/reussite/reussite0026.png" type="Texture" id=59]
+[ext_resource path="res://2D_textures/reussite/reussite0032.png" type="Texture" id=60]
+[ext_resource path="res://2D_textures/reussite/reussite0022.png" type="Texture" id=61]
+[ext_resource path="res://2D_textures/reussite/reussite0019.png" type="Texture" id=62]
+[ext_resource path="res://2D_textures/reussite/reussite0038.png" type="Texture" id=63]
+[ext_resource path="res://2D_textures/reussite/reussite0030.png" type="Texture" id=64]
+[ext_resource path="res://2D_textures/reussite/reussite0025.png" type="Texture" id=65]
+[ext_resource path="res://2D_textures/reussite/reussite0035.png" type="Texture" id=66]
+[ext_resource path="res://2D_textures/reussite/reussite0029.png" type="Texture" id=67]
+[ext_resource path="res://2D_textures/reussite/reussite0033.png" type="Texture" id=68]
+[ext_resource path="res://2D_textures/reussite/reussite0024.png" type="Texture" id=69]
+[ext_resource path="res://2D_textures/reussite/reussite0017.png" type="Texture" id=70]
+[ext_resource path="res://2D_textures/reussite/reussite0036.png" type="Texture" id=71]
+[ext_resource path="res://2D_textures/reussite/reussite0021.png" type="Texture" id=72]
+[ext_resource path="res://2D_textures/reussite/reussite0034.png" type="Texture" id=73]
+[ext_resource path="res://2D_textures/reussite/reussite0027.png" type="Texture" id=74]
+[ext_resource path="res://bull.gd" type="Script" id=75]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type spatial;
@@ -111,6 +154,7 @@ data = PoolVector3Array( -48.5211, 6.4233, 30.89, -48.2304, 5.6949, 34.9512, -49
 [sub_resource type="BoxShape" id=8]
 
 [sub_resource type="BoxShape" id=9]
+extents = Vector3( 1, 1, 2 )
 
 [sub_resource type="PanoramaSky" id=10]
 radiance_size = 1
@@ -149,7 +193,7 @@ material = SubResource( 12 )
 material = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=15]
-size = 40
+size = 30
 font_data = ExtResource( 14 )
 
 [sub_resource type="SpriteFrames" id=16]
@@ -168,151 +212,54 @@ frame_0/texture = ExtResource( 3 )
 frame_1/texture = ExtResource( 27 )
 frame_1/delay_sec = 0.0
 
+[sub_resource type="DynamicFont" id=18]
+size = 30
+font_data = ExtResource( 14 )
+
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 69.7183, 117.805 )
+extents = Vector2( 130.193, 90.396 )
 
-[sub_resource type="RectangleShape2D" id=21]
-extents = Vector2( 192.74, 79.1281 )
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 135.384, 114.914 )
 
-[sub_resource type="BoxShape" id=20]
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 13 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ ExtResource( 46 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 47 ), ExtResource( 43 ), ExtResource( 45 ), ExtResource( 48 ), ExtResource( 42 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 29 ), ExtResource( 40 ), ExtResource( 39 ), ExtResource( 41 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 70 ), ExtResource( 54 ), ExtResource( 62 ), ExtResource( 57 ), ExtResource( 72 ), ExtResource( 61 ), ExtResource( 58 ), ExtResource( 69 ), ExtResource( 65 ), ExtResource( 59 ), ExtResource( 74 ), ExtResource( 56 ), ExtResource( 67 ), ExtResource( 64 ), ExtResource( 55 ), ExtResource( 60 ), ExtResource( 68 ), ExtResource( 73 ), ExtResource( 66 ), ExtResource( 71 ), ExtResource( 53 ), ExtResource( 63 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="BoxShape" id=23]
+
+[sub_resource type="ShaderMaterial" id=24]
+shader = ExtResource( 36 )
+
+[sub_resource type="CubeMesh" id=25]
+material = SubResource( 24 )
+
+[sub_resource type="BoxShape" id=26]
 margin = 0.183
 extents = Vector3( 0.2, 0.2, 0.2 )
 
 [node name="decors" type="Spatial"]
 script = ExtResource( 9 )
 
-[node name="Icosphere001" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -3.9271, 10.0366, -29.4515 )
-
-[node name="Icosphere002" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.993965, 0.0424882, -1.17342, -1.18599, 0.692609, 0.754355, -0.704609, -1.22572, 0.385581, -21.73, 10.7904, -37.0865 )
-
-[node name="Icosphere003" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 34.8078, 8.55025, 0.111692 )
-
-[node name="Icosphere004" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -41.3415, 10.8277, 0.584368 )
-
-[node name="Icosphere005" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -33.064, 8.55025, -16.2063 )
-
-[node name="Icosphere006" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -34.6013, 8.55025, 19.1494 )
-
-[node name="Icosphere007" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -3.9271, 8.55025, 37.7629 )
-
-[node name="Icosphere008" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.08321, 1.06842, 0.198172, -1.18599, 0.692609, 0.754355, -0.557761, 0.602228, -1.21914, 18.9246, 8.55025, 33.9923 )
-
-[node name="Icosphere009" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.579651, 0.580399, -1.22292, -1.18599, 0.692609, 0.754355, -1.07166, -1.08043, -0.173365, 24.8574, 8.55025, -26.865 )
-
-[node name="Icosphere010" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.08445, -0.133089, -1.10628, -1.18599, 0.692609, 0.754355, -0.555354, -1.21922, 0.549292, 37.3875, 8.55025, 19.9329 )
-
-[node name="Icosphere011" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -22.5624, -3.88087, 38.9684 )
-
-[node name="Icosphere012" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.18802, -0.430131, -0.936317, -1.18599, 0.692609, 0.754355, -0.270268, -1.14856, 0.80554, 37.5549, 8.55025, 31.772 )
-
-[node name="Icosphere013" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.89797, -1.18934, 0.130058, -1.18599, 0.692609, 0.754355, 0.823462, -0.299433, 1.22828, -19.6733, 7.14946, -25.3649 )
-
-[node name="Icosphere014" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.802318, -0.327062, 1.23098, -1.18599, 0.692609, 0.754355, 0.916911, 1.18205, -0.101406, -7.48623, 10.0328, -28.4667 )
-
-[node name="Icosphere015" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.631909, 0.52629, -1.22999, -1.18599, 0.692609, 0.754355, -1.0417, -1.1078, -0.11271, 13.2972, -6.60266, -48.0131 )
-
-[node name="Icosphere016" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.621057, -0.537765, 1.22876, -1.18599, 0.692609, 0.754355, 1.0482, 1.10227, 0.125477, 21.616, 8.55025, -29.2331 )
-
-[node name="Icosphere017" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.21441, -0.589401, -0.811981, -1.18599, 0.692609, 0.754355, -0.0982287, -1.07555, 0.930737, 10, 6.65089, -22.777 )
-
-[node name="Icosphere018" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.12946, -0.240797, -1.05315, -1.18599, 0.692609, 0.754355, -0.456892, -1.20259, 0.645331, -39.1273, 12.2116, -15.2309 )
-
-[node name="Icosphere019" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -39.0489, 15.0219, -42.3514 )
-
-[node name="Icosphere020" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.766806, 0.456922, 1.2034, -1.457, 0.588694, 0.436658, 0.42448, 1.19523, -0.675117, -44.225, 14.3423, -36.776 )
-
-[node name="Icosphere021" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -50.4962, 8.55025, -9.93966 )
-
-[node name="Icosphere022" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -41.8801, -5.68423, 8.39756 )
-
-[node name="Icosphere023" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.88726, 1.19311, -0.145911, -1.18599, 0.692609, 0.754355, -0.834991, 0.284048, -1.2265, -49.4474, 13.5018, 11.2766 )
-
-[node name="Icosphere024" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.01992, -0.00393248, -1.15798, -1.18599, 0.692609, 0.754355, -0.666486, -1.22645, 0.429715, -37.7434, 11.7968, 30.3779 )
-
-[node name="Icosphere025" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.224721, -0.882601, 1.11157, -1.18599, 0.692609, 0.754355, 1.19747, 0.851596, 0.538518, -25.7851, 12.5791, 34.6387 )
-
-[node name="Icosphere026" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -29.9565, 16.9097, 42.2115 )
-
-[node name="Icosphere027" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.14205, -0.988877, -0.34231, -1.18599, 0.692609, 0.754355, 0.424446, -0.725481, 1.18676, 33.0625, 9.92036, 39.0816 )
-
-[node name="Icosphere028" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.0465, 0.054432, 1.13931, -1.18599, 0.692609, 0.754355, 0.623922, 1.22525, -0.477035, 28.4855, 8.55025, 21.57 )
-
-[node name="Icosphere029" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 39.5338, -5.05427, -17.5717 )
-
-[node name="Icosphere030" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.00732, 1.1122, 0.231161, -1.24683, 0.628842, 0.742141, -0.567212, 0.592863, -1.22083, 22.7715, 10.3412, -13.8468 )
-
-[node name="Icosphere031" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 46.3309, 14.4097, -11.565 )
-
-[node name="Icosphere032" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1.02166, 0.00714314, 1.15686, -1.18599, 0.692609, 0.754355, 0.663813, 1.22644, -0.432745, -3.9271, 8.55025, -43.1173 )
-
-[node name="Icosphere033" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.796428, 0.334626, -1.2316, -1.18599, 0.692609, 0.754355, -0.922032, -1.17993, 0.0935196, 4.71901, 10.1022, -44.4468 )
-
-[node name="Icosphere034" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 39.0129, 11.2155, -28.0581 )
-
-[node name="Icosphere035" parent="." instance=ExtResource( 2 )]
-transform = Transform( -0.562369, 0.597672, -1.21998, -1.18599, 0.692609, 0.754355, -1.08082, -1.07098, -0.192978, -12.4845, 9.66274, 48.381 )
-
-[node name="Icosphere036" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 9.18689, -6.86781, 42.5966 )
-
-[node name="Icosphere037" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, -17.6817, 8.55025, 22.8179 )
-
-[node name="Icosphere038" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.10017, -0.526296, -0.961892, -1.24595, 0.768425, 0.588597, -0.358127, -1.05662, 0.907168, -20.2946, 8.55025, 13.4188 )
-
-[node name="Icosphere039" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 4.98208, 11.607, 48.3815 )
-
-[node name="Icosphere040" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.08297, -1.06868, -0.19764, -1.18599, 0.692609, 0.754355, 0.558234, -0.601761, 1.21923, 25.0292, 8.55025, 46.8435 )
-
-[node name="Icosphere041" parent="." instance=ExtResource( 2 )]
-transform = Transform( -1.2168, -0.725384, -0.682884, -1.18599, 0.692609, 0.754355, 0.0619098, -0.988948, 1.0292, 46.5915, 8.55025, 10.7751 )
-
-[node name="Icosphere042" parent="." instance=ExtResource( 2 )]
-transform = Transform( 0.064452, 1.05876, -0.952936, -1.18599, 0.692609, 0.754355, -1.21667, -0.619054, -0.78581, 30.9697, 8.55025, -19.4946 )
-
 [node name="Point" type="OmniLight" parent="."]
-transform = Transform( -0.54165, 3.6744e-08, -0.840604, 0.840604, 2.36763e-08, -0.54165, 0, -1, -4.37114e-08, -2.71625, 28.2158, 3.71587 )
-light_color = Color( 0.886275, 0.890196, 0.694118, 1 )
-light_energy = 3.06
+transform = Transform( -0.54165, 3.6744e-08, -0.840604, 0.840604, 2.36763e-08, -0.54165, 0, -1, -4.37114e-08, -7.324, 39.9762, -3.9169 )
+light_color = Color( 0.964706, 0.964706, 0.666667, 1 )
+light_energy = 6.37
 shadow_enabled = true
-shadow_bias = 0.6
+shadow_color = Color( 0.0862745, 0.188235, 0.454902, 1 )
+shadow_bias = 0.7
 omni_range = 73.9
 omni_shadow_mode = 0
 
@@ -357,7 +304,7 @@ script = ExtResource( 11 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0390029, 0.104979, 0 )
 
 [node name="Camera2" type="Camera" parent="KinematicBody/CameraGimbal/InnerGimbal"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.073978, 0.490455, 0 )
+transform = Transform( 1, 0, -3.72529e-09, 0, 1, 0, 3.72529e-09, 0, 1, 0.0739777, 0.999782, 0 )
 far = 150.0
 
 [node name="RayCast" type="RayCast" parent="KinematicBody/CameraGimbal/InnerGimbal/Camera2"]
@@ -365,6 +312,13 @@ transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, 0, -9.5
 enabled = true
 cast_to = Vector3( 10, 0, 0 )
 script = ExtResource( 17 )
+
+[node name="OmniLight" type="OmniLight" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.655184, 5.96893, 0.223567 )
+light_energy = 1.51
+light_specular = 1.0
+shadow_bias = 1.0
+omni_range = 42.9
 
 [node name="RigidBody" type="RigidBody" parent="."]
 mode = 1
@@ -426,7 +380,11 @@ transform = Transform( -0.105188, 0, -8.95007, 0, 3, 0, 0.994452, 0, -0.94669, 4
 shape = SubResource( 8 )
 
 [node name="CollisionShape15" type="CollisionShape" parent="RigidBody"]
-transform = Transform( 2.5, 0, 0, 0, 5, 0, 0, 0, 5, 12.4353, 3.84279, 4.07973 )
+transform = Transform( 2.75032, 0, -1.19822, 0, 8, 0, 1.19822, 0, 2.75032, 19.1999, 4.52595, 6.39639 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape16" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1.32052, 0, 5.38747, 0, 8, 0, -2.69374, 0, 2.64105, -11.708, 4.52595, 15.4989 )
 shape = SubResource( 9 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -479,7 +437,22 @@ margin_right = 1915.0
 margin_bottom = 1074.0
 texture = ExtResource( 32 )
 
+[node name="fond" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_top = -0.000925926
+anchor_right = 0.999479
+anchor_bottom = 0.997222
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/fond"]
+margin_right = 1919.0
+margin_bottom = 1078.0
+texture = ExtResource( 1 )
+
 [node name="tutorial" type="VSplitContainer" parent="CanvasLayer2"]
+visible = false
 anchor_top = 0.247
 anchor_right = 0.51118
 anchor_bottom = 1.0
@@ -535,25 +508,31 @@ margin_bottom = 1079.0
 texture = SubResource( 17 )
 
 [node name="console" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 1.89566e-05
-anchor_top = -0.059339
-anchor_right = 0.510761
-anchor_bottom = 0.685661
+anchor_left = 0.025
+anchor_top = 0.496296
+anchor_right = 0.479167
+anchor_bottom = 0.769444
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/console"]
-margin_right = 980.624
-margin_bottom = 804.6
-texture = ExtResource( 13 )
+margin_right = 872.001
+margin_bottom = 295.0
+region_rect = Rect2( -0.881104, 362.466, 1001.27, 633.083 )
+patch_margin_top = 47
+patch_margin_right = 126
 
 [node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer2/console/NinePatchRect"]
-anchor_left = 0.0248566
-anchor_top = 0.798658
-anchor_right = 0.97132
-anchor_bottom = 0.975392
+anchor_left = 0.003
+anchor_top = 0.01
+anchor_right = 0.999
+anchor_bottom = 0.99
+margin_left = 0.384
+margin_top = 0.0499997
+margin_right = -0.128052
+margin_bottom = -0.0500183
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 15 )
 __meta__ = {
@@ -561,35 +540,34 @@ __meta__ = {
 }
 
 [node name="editeur" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 4.18299e-05
-anchor_top = -0.246173
-anchor_right = 0.510784
-anchor_bottom = 0.498827
+anchor_top = -1.18704
+anchor_right = 0.510938
+anchor_bottom = 0.499074
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/editeur"]
-margin_right = 980.624
-margin_bottom = 804.6
-texture = ExtResource( 13 )
+margin_right = 981.001
+margin_bottom = 1821.0
 
 [node name="TextEdit" type="TextEdit" parent="CanvasLayer2/editeur/NinePatchRect"]
-margin_left = 29.0
-margin_top = 642.0
-margin_right = 953.0
-margin_bottom = 785.0
+margin_left = 53.0
+margin_top = 1374.0
+margin_right = 918.0
+margin_bottom = 1709.0
+custom_fonts/font = SubResource( 18 )
 smooth_scrolling = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="fleche_haut" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 0.566655
-anchor_top = 0.437067
-anchor_right = 0.651616
-anchor_bottom = 0.688734
+anchor_left = 0.555729
+anchor_top = 0.418519
+anchor_right = 0.641146
+anchor_bottom = 0.705556
 mouse_filter = 2
 script = ExtResource( 19 )
 __meta__ = {
@@ -603,23 +581,20 @@ script = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/fleche_haut/KinematicBody2D"]
 position = Vector2( 78.6017, 131.237 )
+rotation = 1.56519
 shape = SubResource( 19 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/fleche_haut"]
-margin_right = 163.125
-texture = ExtResource( 18 )
-
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/fleche_haut"]
-margin_top = 12.0
-margin_right = 163.125
-margin_bottom = 271.8
-texture = ExtResource( 8 )
+visible = false
+margin_right = 164.0
+margin_bottom = 310.0
+texture = ExtResource( 38 )
 
 [node name="fleche_bas" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 0.649082
-anchor_top = 1.00294
-anchor_right = 0.734043
-anchor_bottom = 1.25461
+anchor_left = 0.642187
+anchor_top = 0.983333
+anchor_right = 0.730208
+anchor_bottom = 1.25833
 rect_rotation = -179.785
 mouse_filter = 2
 script = ExtResource( 19 )
@@ -635,23 +610,77 @@ script = ExtResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/fleche_bas/KinematicBody2D"]
 position = Vector2( 6.15007, 155.791 )
+rotation = 1.56899
 shape = SubResource( 19 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/fleche_bas"]
-margin_right = 163.125
-texture = ExtResource( 18 )
-
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/fleche_bas"]
-margin_top = 12.0
-margin_right = 163.125
-margin_bottom = 271.803
-texture = ExtResource( 8 )
+visible = false
+margin_right = 169.0
+margin_bottom = 297.0
+texture = ExtResource( 38 )
+
+[node name="fleche_droite" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_left = 0.650345
+anchor_top = 0.200397
+anchor_right = 0.735762
+anchor_bottom = 0.487434
+rect_rotation = 90.0003
+mouse_filter = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/fleche_droite"]
+position = Vector2( 0, 12 )
+input_pickable = true
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/fleche_droite/KinematicBody2D"]
+position = Vector2( 78.6017, 131.237 )
+rotation = 1.56669
+shape = SubResource( 19 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/fleche_droite"]
+visible = false
+margin_right = 164.0
+margin_bottom = 310.0
+texture = ExtResource( 38 )
+
+[node name="fleche_gauche" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_left = 0.490063
+anchor_top = 0.200827
+anchor_right = 0.578084
+anchor_bottom = 0.475827
+rect_rotation = -89.7152
+mouse_filter = 2
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/fleche_gauche"]
+position = Vector2( 86.978, 295.5 )
+rotation = 3.13784
+input_pickable = true
+script = ExtResource( 20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/fleche_gauche/KinematicBody2D"]
+position = Vector2( 6.15007, 155.791 )
+rotation = -1.57921
+shape = SubResource( 19 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/fleche_gauche"]
+visible = false
+margin_right = 169.0
+margin_bottom = 297.0
+texture = ExtResource( 38 )
 
 [node name="bouton_continuer" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 0.42894
-anchor_top = 0.66111
-anchor_right = 0.530503
-anchor_bottom = 0.839443
+anchor_left = 0.420833
+anchor_top = 0.882407
+anchor_right = 0.565104
+anchor_bottom = 0.999074
 mouse_filter = 2
 script = ExtResource( 19 )
 __meta__ = {
@@ -659,7 +688,7 @@ __meta__ = {
 }
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/bouton_continuer"]
-position = Vector2( 0, 12 )
+position = Vector2( 41.3554, -26.7706 )
 input_pickable = true
 script = ExtResource( 20 )
 
@@ -667,21 +696,17 @@ script = ExtResource( 20 )
 position = Vector2( 96.7718, 92.6515 )
 shape = SubResource( 19 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/bouton_continuer"]
-margin_right = 195.0
-texture = ExtResource( 25 )
-
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/bouton_continuer"]
-margin_top = 12.0
-margin_right = 195.0
-margin_bottom = 192.6
-texture = ExtResource( 24 )
+visible = false
+margin_right = 277.0
+margin_bottom = 126.0
+texture = ExtResource( 8 )
 
 [node name="bouton_titiller" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 0.323967
-anchor_top = 0.662523
-anchor_right = 0.423577
-anchor_bottom = 0.837523
+anchor_left = 0.279687
+anchor_top = 0.883333
+anchor_right = 0.420312
+anchor_bottom = 1.00093
 rect_rotation = -0.294684
 mouse_filter = 2
 script = ExtResource( 19 )
@@ -690,7 +715,7 @@ __meta__ = {
 }
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/bouton_titiller"]
-position = Vector2( 86.978, 295.5 )
+position = Vector2( 127.95, 266.552 )
 rotation = 3.13784
 input_pickable = true
 script = ExtResource( 20 )
@@ -699,21 +724,17 @@ script = ExtResource( 20 )
 position = Vector2( -6.33673, 202.538 )
 shape = SubResource( 19 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/bouton_titiller"]
-margin_right = 191.25
-texture = ExtResource( 23 )
-
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/bouton_titiller"]
-margin_top = 12.0
-margin_right = 191.25
-margin_bottom = 189.0
-texture = ExtResource( 22 )
+visible = false
+margin_right = 270.0
+margin_bottom = 127.0
+texture = ExtResource( 8 )
 
 [node name="bouton_reboot" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = 0.216205
-anchor_top = 0.660145
-anchor_right = 0.316791
-anchor_bottom = 0.840145
+anchor_left = 0.138542
+anchor_top = 0.884259
+anchor_right = 0.279687
+anchor_bottom = 1.00278
 rect_rotation = -0.294684
 mouse_filter = 2
 script = ExtResource( 19 )
@@ -722,7 +743,7 @@ __meta__ = {
 }
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/bouton_reboot"]
-position = Vector2( 86.978, 295.5 )
+position = Vector2( 126.837, 256.048 )
 rotation = 3.13784
 input_pickable = true
 script = ExtResource( 20 )
@@ -731,21 +752,17 @@ script = ExtResource( 20 )
 position = Vector2( -7.46002, 190.782 )
 shape = SubResource( 19 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/bouton_reboot"]
-margin_right = 193.125
-texture = ExtResource( 29 )
-
 [node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/bouton_reboot"]
-margin_top = 12.0
-margin_right = 193.125
-margin_bottom = 194.4
-texture = ExtResource( 28 )
+visible = false
+margin_right = 271.0
+margin_bottom = 128.0
+texture = ExtResource( 8 )
 
-[node name="bouton_charger" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_left = -0.00181993
-anchor_top = 0.660515
-anchor_right = 0.215954
-anchor_bottom = 0.845515
+[node name="bouton_retour" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_left = -0.000520833
+anchor_top = 0.808333
+anchor_right = 0.147396
+anchor_bottom = 1.00093
 rect_rotation = -0.294684
 mouse_filter = 2
 script = ExtResource( 19 )
@@ -753,51 +770,379 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/bouton_charger"]
-position = Vector2( 86.978, 295.5 )
+[node name="KinematicBody2D" type="KinematicBody2D" parent="CanvasLayer2/bouton_retour"]
+position = Vector2( 17.6069, 293.783 )
 rotation = 3.13784
 input_pickable = true
 script = ExtResource( 20 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/bouton_charger/KinematicBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer2/bouton_retour/KinematicBody2D"]
 position = Vector2( -126.365, 189.691 )
-shape = SubResource( 21 )
+shape = SubResource( 20 )
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="CanvasLayer2/bouton_charger"]
-margin_right = 418.125
-texture = ExtResource( 31 )
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/bouton_retour"]
+visible = false
+margin_right = 284.0
+margin_bottom = 208.0
+texture = ExtResource( 18 )
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/bouton_charger"]
-margin_top = 12.0
-margin_right = 418.125
-margin_bottom = 199.8
-texture = ExtResource( 30 )
-
-[node name="VSplitContainer5" type="VSplitContainer" parent="CanvasLayer2"]
-anchor_right = 0.634766
-anchor_bottom = 0.275
+[node name="aide" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_right = 0.179167
+anchor_bottom = 0.0851852
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/VSplitContainer5"]
-margin_right = 1218.75
-margin_bottom = 297.0
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/aide"]
+margin_right = 344.001
+margin_bottom = 92.0
 texture = ExtResource( 21 )
 
-[node name="bull" parent="." instance=ExtResource( 1 )]
-transform = Transform( -0.3, 0, -9.77524e-08, 0, 0.3, 0, 9.77524e-08, 0, -0.3, 12.4196, 1.85278, 4.1214 )
+[node name="VSplitContainer6" type="VSplitContainer" parent="CanvasLayer2"]
+visible = false
+anchor_top = -0.000925926
+anchor_right = 0.999479
+anchor_bottom = 0.997222
+mouse_filter = 2
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CanvasLayer2/VSplitContainer6"]
+margin_right = 1919.0
+margin_bottom = 1078.0
+texture = ExtResource( 26 )
+
+[node name="tuto" type="VSplitContainer" parent="CanvasLayer2"]
+anchor_top = -0.000925926
+anchor_right = 0.999479
+anchor_bottom = 0.997222
+mouse_filter = 2
+script = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="CanvasLayer2/tuto"]
+position = Vector2( 964.146, 543.492 )
+scale = Vector2( 0.335267, 0.335285 )
+frames = SubResource( 21 )
+frame = 2
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="CanvasLayer2/tuto"]
+position = Vector2( 59.9175, -409.657 )
+scale = Vector2( 1.15021, 0.994385 )
+frames = SubResource( 22 )
+speed_scale = 5.0
+centered = false
+
+[node name="bull" parent="." instance=ExtResource( 34 )]
+transform = Transform( -0.275032, 0, 0.119821, 0, 0.3, 0, -0.119821, 0, -0.275032, 18.7081, 2.67411, 7.3059 )
+script = ExtResource( 75 )
+
+[node name="open_racks" type="Spatial" parent="bull"]
+script = ExtResource( 37 )
+
+[node name="StaticBody" type="StaticBody" parent="bull/open_racks"]
+
+[node name="CollisionShape" type="CollisionShape" parent="bull/open_racks/StaticBody"]
+transform = Transform( 6, 0, 2.38419e-06, 0, 15, 0, -1.19209e-06, 0, 12, 6.9785, 14.0916, 14.1326 )
+shape = SubResource( 23 )
+
+[node name="MeshInstance" type="MeshInstance" parent="bull/open_racks"]
+transform = Transform( 3, 0, 0, 0, 13, 0, 0, 0, 8, 5.20985, 14.3485, 12.1691 )
+mesh = SubResource( 25 )
+material/0 = null
+
+[node name="panel_nopanel" parent="." instance=ExtResource( 35 )]
+transform = Transform( -0.256802, -0.59712, 2.40932e-08, 0, -2.84124e-08, -0.6, 0.59712, -0.256802, 1.03617e-08, 15.2887, 10.5318, 9.40749 )
 
 [node name="panel" parent="." instance=ExtResource( 16 )]
-transform = Transform( -9.77524e-08, -0.6, 2.53526e-08, 0, -2.62268e-08, -0.58, 0.6, -9.77524e-08, 4.13046e-15, 10.1744, 9.77304, 7.41301 )
+transform = Transform( -0.256802, -0.643052, 2.61009e-08, 0, -3.0598e-08, -0.65, 0.59712, -0.276557, 1.12252e-08, 15.2936, 10.3862, 9.4042 )
 
 [node name="StaticBody" type="StaticBody" parent="panel"]
-transform = Transform( 6, 0, 0, 0, 2, 5.18934e-20, 0, -8.64891e-21, 12, -3.16663e-08, -0.194363, 0 )
+transform = Transform( 10, 7.95808e-13, -6.09864e-20, -1.13687e-12, 8, 6.25278e-13, 6.77626e-21, -3.97904e-13, 15, 0.231795, -0.21146, 0 )
 
 [node name="CollisionShape" type="CollisionShape" parent="panel/StaticBody"]
-transform = Transform( 1, 0, -3.38813e-21, 0, 1, -2.59466e-20, 0, -7.20742e-22, 1, 0, 0, 0 )
-shape = SubResource( 20 )
+transform = Transform( 1.49884, -0.0338394, 2.57531e-09, 0.0683846, 0.999229, 5.87299e-11, -1.71686e-09, 1.93592e-11, 1, 0.00528044, 0.0228777, -0.0580356 )
+shape = SubResource( 26 )
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource( 6 )
+
+[node name="arbre" type="MeshInstance" parent="."]
+transform = Transform( 0.997755, 0, -0.0669703, 0, 1, 0, 0.0669703, 0, 0.997755, -11.3156, 1.03211, -26.7142 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre2" type="MeshInstance" parent="."]
+transform = Transform( 0.107912, 0, -0.99416, 0, 1, 0, 0.99416, 0, 0.107912, 2.71103, 1.68044, -28.5464 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre12" type="MeshInstance" parent="."]
+transform = Transform( 0.110654, 0, 0.993859, 0, 1, 0, -0.993859, 0, 0.110654, 19.2343, 0.262787, -26.7142 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre13" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.9593, -1.96544, -26.7142 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre14" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, -1.96544, -26.7142 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre15" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, -1.96544, -11.1318 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre16" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, 2.1657, 4.59166 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre17" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, -1.96544, 18.8013 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre18" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, -1.96544, 33.2288 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre19" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 48.5292, -1.96544, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre20" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4658, -1.96544, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre21" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6301, 5.11103, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre46" type="MeshInstance" parent="."]
+transform = Transform( 0.738655, 0, 0.674083, 0, 1, 0, -0.674083, 0, 0.738655, 17.8625, -14.982, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre22" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38942, -1.96544, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre23" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.0484, -1.96544, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre24" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -42.2793, -1.96544, 48.8578 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre25" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -42.2793, -1.96544, 33.4828 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre26" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -42.2793, 3.99782, 16.0842 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre27" type="MeshInstance" parent="."]
+transform = Transform( 0.605683, 0, 0.795706, 0, 1, 0, -0.795706, 0, 0.605683, -42.2793, 4.20835, 0.274887 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre42" type="MeshInstance" parent="."]
+transform = Transform( 0.605683, 0, 0.795706, 0, 1, 0, -0.795706, 0, 0.605683, -36.511, -14.4924, 12.5697 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre28" type="MeshInstance" parent="."]
+transform = Transform( 0.822888, 0, -0.568203, 0, 1, 0, 0.568203, 0, 0.822888, -42.2453, 3.3004, -11.417 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre29" type="MeshInstance" parent="."]
+transform = Transform( 0.988604, 0, 0.150536, 0, 1, 0, -0.150536, 0, 0.988604, -29.4249, 1.35125, -14.7592 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre45" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -32.5105, -15.2709, -33.5001 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre30" type="MeshInstance" parent="."]
+transform = Transform( 0.557528, 0, -0.830158, 0, 1, 0, 0.830158, 0, 0.557528, -23.7066, 0.981074, 14.2203 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre31" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -29.4249, -1.96544, 30.2545 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre32" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -14.1452, -1.96544, 30.2545 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre33" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, -8.07309, -1.96544, 39.7814 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre34" type="MeshInstance" parent="."]
+transform = Transform( 0.18021, 0, 0.983628, 0, 1, 0, -0.983628, 0, 0.18021, 9.12163, -0.0358629, 37.3317 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre35" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 25.3946, 1.86041, 39.7814 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre36" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 25.3946, 1.57969, 28.068 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre37" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 36.2137, -1.96544, 28.068 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre38" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 36.2137, 0.367184, 15.2951 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre43" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 40.3183, -15.7011, 4.36715 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre39" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 36.2137, 0.390837, -7.08667 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre40" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 32.1225, -1.96544, -17.7487 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre41" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 23.8462, 0.900419, -8.98946 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre44" type="MeshInstance" parent="."]
+transform = Transform( 0.981995, 0, 0.188907, 0, 1, 0, -0.188907, 0, 0.981995, 28.0468, -14.4095, -20.6959 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre3" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.71103, -1.96544, -39.6235 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre4" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4806, -1.96544, -39.6235 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre5" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.6469, -1.96544, -39.6235 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre6" type="MeshInstance" parent="."]
+transform = Transform( -0.00657988, 0, -0.999978, 0, 1, 0, 0.999978, 0, -0.00657988, -24.3019, 0.664179, -29.935 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre7" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.0852, -1.96544, -24.0359 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre8" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40.0852, -1.96544, -41.4431 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre9" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2672, -1.96544, -41.4431 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre10" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 34.7722, -1.96544, -41.4431 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null
+
+[node name="arbre11" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 47.2783, -1.96544, -41.4431 )
+mesh = ExtResource( 2 )
+material/0 = null
+material/1 = null

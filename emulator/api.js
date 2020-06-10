@@ -16,7 +16,7 @@ var Execution = require("./control/execution").Execution;
 var CodeLibrary = require("./control/code_lib").CodeLibrary;
 
 // paramètres du serveur.
-var HOSTNAME = '192.168.1.18';
+var HOSTNAME = '127.0.0.1';
 var PORT = 8001;
 
 
@@ -29,6 +29,19 @@ class ServedMachine {
     this.editor    = new Editor      (this.bullGamma);
     this.execution = new Execution   (this.bullGamma);
     this.codelib   = new CodeLibrary ();
+		this.inactivityLevel = 0;
+	}
+
+	stillActive() {
+		return (this.inactivityLevel < 3);
+	}
+
+	IAmStillHere() {
+		this.inactivityLevel = 0;
+	}
+
+	inactive() {
+		this.inactivityLevel += 1;
 	}
 
   loadProgram(name) {
@@ -75,6 +88,24 @@ var activeMachines = {0:testmachine};
 var app = express();
 var router = express.Router();
 
+function timeout_delete_machine(i) {
+  console.log("timeout reached for " + i);
+	if (activeMachines[i].stillActive()){
+		activeMachines[i].inactive()
+		setTimeout(timeout_delete_machine, 42000, i);
+	} else {
+		console.log("machine " + i + " supprimée automatiquement");
+		delete activeMachines[i];
+	}
+}
+
+
+router.route('/maintient_connexion')
+.get(function(req,res){
+			console.log("machine " + req.query.id + " prolongée");
+			activeMachines[parseInt(req.query.id)].IAmStillHere();
+			res.json({message : "machine prolongée"});
+});
 
 // cree une machine et renvoie son numéro
 router.route('/cree_machine')
@@ -85,6 +116,8 @@ router.route('/cree_machine')
 			activeMachines[i] = machine;
 			console.log("machine " + i + " créée");
 			res.json({message : "" + i});
+
+			setTimeout(timeout_delete_machine, 42000, i);
 });
 
 // cree une machine et renvoie son numéro
@@ -94,7 +127,7 @@ router.route('/supprime_machine')
 	    res.json({message : "machine deletion order received"});
 			if (req.query.id != undefined && parseInt(req.query.id) != 0){
 				console.log("machine " + req.query.id + " supprimée");
-				delete activeMachines[parseInt(req.query.id)];
+				//delete activeMachines[parseInt(req.query.id)];
 			}
 			//req.query.id
 });

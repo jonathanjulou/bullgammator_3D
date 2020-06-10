@@ -14,7 +14,7 @@ extends RichTextLabel
 var tutorial = """
 @ Scene 1 $
 {
-Bonjour, vous pouvez faire avancer le texte en appuyant sur 'entrée'.$
+Bonjour, vous pouvez faire avancer le texte en appuyant sur 'entrée'. Si vous n'arrivez pas, essayez le bouton gauche de la souris$
 Appuyez sur 'C', cela vous permettra de contrôler la caméra.$
 Si vous appuyez sur 'F', vous récupèrerez votre pointeur de souris.$
 Vous pouvez vous déplacer avec soit les flèches directionelles, soit les touches ZQSD.$
@@ -23,14 +23,17 @@ Si vous vous approchez du panneau et le regardez, il devrait briller en rose.$
 Cela signifie que vous pouvez intéragir avec.$
 Cliquez sur le bouton droit de la souris, vous arriverez dans l'interface de programmation.$
 Vous pouvez quitter ce mode en cliquant sur 'C'.$
-Ici on devrait pouvoir programmer sur le panneau à droite, mais ce n'est pas encore implémenté.$
 les flèches permettent de changer de panneau, pour écrire des programmes plus longs.$
 (à terme ça ira jusqu'à la ligne 63, comme en vrai)$
 La fenêtre de dialogue qui vient d'apparaitre au dessus est la console de sortie de bullgammator.$
-Pour l'instant, le programme 'suite_de_fibonacci' à été chargé par défaut à titre de test.$
+La fenêtre de dialogue juste au dessus est un éditeur de programme en hexadécimal.$
+Le bouton 'CHARGER SUR LE PANNEAU' permet de charger un programme entré dans l'éditeur sur le panneau.$
+Par défaut, au démarrage c'est la suite de fibonacci, mais chaque modification du panneau modifiera l'éditeur.$
 Si vous cliquez sur le bouton 'TITILLER', le programme avancera d'une instruction.$
 Ce n'est pas vraiment visible sans débug à moins de cliquer beaucoup.$
 Le bouton 'CONTINUER' permet de continuer à éxécuter le programme jusqu'à la fin.$
+Le bouton 'REBOOT' permet de redémarrer la machine, réinitialisant tout.$
+Pour jouer avec le panneau, il faut d'abord selectionner une constante, puis on peut cliquer sur un trou pour la lui affecter.$
 }"""
 
 

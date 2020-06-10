@@ -7,6 +7,7 @@ var ray_length = 15
 var delta = 1
 
 var look_panel = false
+var look_racks = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,6 +16,9 @@ func _ready():
 
 func is_panel_looked():
 	return look_panel
+	
+func is_racks_looked():
+	return look_racks
 
 
 func _physics_process(delta):
@@ -25,23 +29,23 @@ func _physics_process(delta):
 
 	var panel = get_tree().get_root().get_node("decors").find_node("panel")
 	var panel2 = panel.get_node("StaticBody")
+	
+	var racks = get_tree().get_root().get_node("decors").find_node("open_racks")
+	var racks2 = racks.get_node("StaticBody")
 
 	var collision_point = get_collider() 
-	
-	#var cp = get_collision_point()
-	
-	#var debug = get_tree().get_root().get_node("decors").find_node("debug")
-	
-	#debug.translation.x = to[0]
-	#debug.translation.y = to[1]
-	#debug.translation.z = to[2]
 
 	if collision_point == panel2:
 		panel.show_highlight()
 		look_panel = true
+	elif collision_point == racks2:
+		racks.show_highlight()
+		look_racks = true
 	else:
 		panel.hide_highlight()
+		racks.hide_highlight()
 		look_panel = false
+		look_racks = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
